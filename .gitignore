@@ -1,0 +1,49 @@
+# SAFETY: this repository starts as a collaboration-system-only repository.
+# Every existing artwork/source file is private and ignored by default.
+# Add a deliberate !/path rule here only when the team decides to share it.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/COLLABORATION.md
+!/.github/
+!/.github/**
+!/team-template/
+!/team-template/**
+
+# macOS / editors
+.DS_Store
+._*
+*.swp
+*.tmp
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# TouchDesigner recovery, backup, and generated inspection files
+CrashAutoSave*.toe
+*.toe.bkp*
+*.toe.autosave
+*.toc
+*.inspect.toc
+*.build.toc
+*.toe.dir/
+*.build.dir/
+
+# Local machine configuration and logs
+.env
+.env.*
+!.env.example
+*.log
+
+# Render/output folders (reference media elsewhere is still versioned)
+output/
+outputs/
+render/
+renders/
+cache/
+temp/
