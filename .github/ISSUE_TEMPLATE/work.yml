@@ -1,0 +1,36 @@
+name: 작업 등록
+description: 기능, 비주얼 또는 오류 수정 작업을 등록합니다.
+title: "[작업] "
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: 작업 영역
+      options:
+        - 통합
+        - 비주얼
+        - 인터랙션
+        - 사운드
+        - 문서
+    validations:
+      required: true
+  - type: input
+    id: files
+    attributes:
+      label: 수정할 파일
+      description: 특히 .toe 또는 .tox 파일을 정확히 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: 목표와 완료 조건
+    validations:
+      required: true
+  - type: checkboxes
+    id: lock
+    attributes:
+      label: 충돌 확인
+      options:
+        - label: 다른 팀원이 같은 .toe 파일을 수정 중이지 않음을 확인했습니다.
+          required: true
